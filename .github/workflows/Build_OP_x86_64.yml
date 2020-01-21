@@ -173,6 +173,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-zerotier=n
           CONFIG_PACKAGE_luci-app-pptp-server=n
           CONFIG_PACKAGE_luci-app-v2ray-server=n
+          CONFIG_PACKAGE_autosamba=n
+          CONFIG_PACKAGE_luci-app-samba=n
           EOF
 
           # LuCI主题:
