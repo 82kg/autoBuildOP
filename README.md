@@ -4,4 +4,4 @@
 AutoBuild-OpenWrt
 编译X86固件，一直觉得路由就干路由的事，插件从简，默认软件如下图
 
-
+![插件](https://raw.githubusercontent.com/82kg/autoBuildOP/master/3.png)
