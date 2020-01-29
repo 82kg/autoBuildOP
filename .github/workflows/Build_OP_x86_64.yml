@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: 自动编译
+name: 自动编译X86_64固件
 
 on:
   #push:
