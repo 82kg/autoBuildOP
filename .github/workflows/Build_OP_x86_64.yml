@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: X86_64固件2020-02-05
+name: X86_64固件2020-02-06
 
 on:
   push:
