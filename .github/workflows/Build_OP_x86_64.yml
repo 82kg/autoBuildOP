@@ -159,8 +159,10 @@ jobs:
           CONFIG_PACKAGE_luci-app-udpxy=y
           CONFIG_PACKAGE_luci-app-firewall=y
           CONFIG_PACKAGE_luci-app-accesscontrol=y
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
@@ -178,6 +180,8 @@ jobs:
           CONFIG_PACKAGE_autosamba=n
           CONFIG_PACKAGE_luci-app-samba=n
           CONFIG_PACKAGE_luci-app-nlbwmon=n
+          CONFIG_PACKAGE_luci-app-sqm=n
+          CONFIG_PACKAGE_luci-app-ramfree=n
           EOF
 
           # LuCI主题:
