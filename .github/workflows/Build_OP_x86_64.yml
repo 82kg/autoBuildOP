@@ -168,6 +168,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-qbittorrent=n
           CONFIG_PACKAGE_luci-app-adbyby-plus=n
           CONFIG_PACKAGE_luci-app-unblockmusic=n
+          CONFIG_PACKAGE_luci-app-unblockneteasemusic-mini=n
           CONFIG_PACKAGE_luci-app-vsftpd=n
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
           CONFIG_PACKAGE_luci-app-vlmcsd=n
