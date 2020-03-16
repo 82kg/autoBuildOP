@@ -10,11 +10,11 @@
 name: K2P固件-2020-03-16
 
 on:
-  #push:
+  push:
      branches: 
        - master
-  schedule:
-    - cron: 0 23 * * *
+  #schedule:
+    #- cron: 0 23 * * *
     
 jobs:
   build:
