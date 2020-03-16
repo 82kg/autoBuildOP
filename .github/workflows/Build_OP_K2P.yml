@@ -10,11 +10,11 @@
 name: K2P固件
 
 on:
-  push:
-     branches: 
-       - k2p
-  #schedule:
-    #- cron: 0 23 * * *
+  #push:
+     #branches: 
+       #- k2p
+  schedule:
+    - cron: 0 1 * * *
     
 jobs:
   build:
