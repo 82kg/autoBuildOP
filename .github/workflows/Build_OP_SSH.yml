@@ -49,7 +49,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
+      uses: 82kg/debugger-action@master
 
     - name: Download package
       id: package
