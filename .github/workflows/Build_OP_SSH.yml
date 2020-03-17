@@ -1,4 +1,4 @@
-name: Build_OP_SSH_k2p
+name: Build_OP
 
 on:
   push:
@@ -86,7 +86,6 @@ jobs:
 
     - name: 上传固件
       uses: actions/upload-artifact@master
-      if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware
         path: openwrt/artifact
