@@ -14,7 +14,6 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: .config
   UPLOAD_BIN_DIR: false
   TZ: Asia/Shanghai
 
@@ -27,7 +26,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Initialization environment
+    - name: 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -38,19 +37,19 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
 
-    - name: Clone source code
+    - name: 克隆源码
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
-    - name: Update feeds
+    - name: 更新feeds
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: Install feeds
+    - name: 安装feeds
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: SSH connection to Actions
       uses: 82kg/debugger-action@master
 
-    - name: Download package
+    - name: 下载所有包
       id: package
       run: |
         cd openwrt
@@ -59,7 +58,7 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-    - name: Compile the firmware
+    - name: 开始编译固件
       id: compile
       run: |
         cd openwrt
@@ -67,14 +66,14 @@ jobs:
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
 
-    - name: Upload bin directory
+    - name: 上传编译后的bin包
       uses: actions/upload-artifact@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin
         path: openwrt/bin
 
-    - name: Organize files
+    - name: 组装编译后的固件
       id: organize
       working-directory: ./openwrt
       run: |
@@ -85,7 +84,7 @@ jobs:
         find ./bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
         find ./bin/targets/ -name "*config*" | xargs -i mv -f {} ./artifact/
 
-    - name: Upload firmware directory
+    - name: 上传固件
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
