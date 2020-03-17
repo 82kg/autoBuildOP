@@ -10,11 +10,11 @@
 name: build-x86_64
 
 on:
-  push:
-     branches: 
-       - master
-  #schedule:
-    #- cron: 0 1 * * *
+  #push:
+     #branches: 
+       #- master
+  schedule:
+    - cron: 0 1 * * *
     
 jobs:
   build:
