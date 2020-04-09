@@ -5,7 +5,8 @@
 ![插件](https://raw.githubusercontent.com/82kg/autoBuildOP/master/3.png)
 
 # 如何使用本项目的编译方法
-1、编辑下 Build_OP_SSH.yml，改第一行的注释日期，commit一下，就开始编译了。
+1、编辑下workflows里的Build_OP_SSH.yml，改第一行的注释日期，commit一下，就开始编译了。
+   commit的title 可以写本次编译的X86固件还是K2P固件，内容不用写
 
 # 如何进入SSH 自定义make menuconfig
 
