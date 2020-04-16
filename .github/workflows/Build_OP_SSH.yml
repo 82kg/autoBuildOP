@@ -1,4 +1,4 @@
-# modify @2020-04-06 09:28
+# modify @2020-04-16 13:28
 
 name: Build_OP
 
@@ -41,6 +41,9 @@ jobs:
 
     - name: 克隆源码
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+    
+    - name: 安装PLUS
+      run: cd openwrt && git clone https://github.com/fw876/helloworld package/openwrt-packages/helloworld
 
     - name: 更新feeds
       run: cd openwrt && ./scripts/feeds update -a
