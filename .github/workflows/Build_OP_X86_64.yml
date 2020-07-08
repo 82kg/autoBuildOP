@@ -4,12 +4,9 @@ name: Build_OP
 
 on:
 
-  release:
-    types: [published]
-    
- #push:
-    #branches:
-     # - master
+ push:
+    branches:
+      - x86_64
     #paths:
       #- '.config'
 #  schedule:
