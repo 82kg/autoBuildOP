@@ -1,4 +1,4 @@
-# modify @2020-07-08
+# modify @2020-07-09
 
 name: Build_OP
 
@@ -85,6 +85,7 @@ jobs:
         rm -rf ./artifact/
         mkdir -p ./artifact/
         find ./bin/targets/ -name "*combined.img*" | xargs -i mv -f {} ./artifact/
+        find ./bin/targets/ -name "*combined.vmdk*" | xargs -i mv -f {} ./artifact/
         find ./bin/targets/ -name "*config*" | xargs -i mv -f {} ./artifact/
 
     - name: 上传固件
