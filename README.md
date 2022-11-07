@@ -1,3 +1,5 @@
+# 有更好用的了，请看  https://github.com/82kg/shared-lede 
+
 # 如何下载固件
 1、点开Actions 
 2、找到最新的一条点开即可下载。
